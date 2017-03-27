@@ -1,0 +1,41 @@
+{{#unless canEnter}}
+  <div class="container">
+    <div class="row" style="margin-top: 15%;text-align: center">
+      <h1 style="margin-bottom: 30px">Chat App</h1>
+      <form style="height: 50px">
+        <div class="form-group">
+          {{ input class="form-control input" type="text" name="username" ref="username" placeholder="Enter username" autocomplete="off" autofocus="true" value=username maxlength="10"}}
+          <input type="submit" style="margin-top: 30px" {{ action "enterChat" }} class="btn btn-sm btn-primary" disabled={{ if username false true}} value="Enter Chat">
+        </div>
+        <div id="errorMsg"></div>
+      </form>
+    </div>
+  </div>
+{{/unless}}
+
+{{#if canEnter}}
+  <h1 style="text-align: left; text-indent: 20px">Chat App</h1>
+  <div class="main-box">
+    <div class="chat-box" id="chat-box">
+    </div>
+    <div class="message-box">
+      <form onsubmit="return false">
+        <div class="form-group">
+          {{ input class="form-control message" type="text" name="message" ref="message" placeholder="Type your message" autocomplete="off" autofocus="true" value=message }}
+          <input type="submit" {{ action "sendMessage" }} class="btn" style="display: none" disabled={{ if message false true}} value="Enter Chat">
+        </div>
+      </form>
+    </div>
+  </div>
+  <div class="members">
+    <h3 style="text-indent: 10px">Members</h3>
+    <hr>
+    <ul>
+      {{#each members as |member|}}
+        <li class="members-list">{{member}}</li>
+      {{/each}}
+    </ul>
+  </div>
+{{/if}}
+
+{{outlet}}

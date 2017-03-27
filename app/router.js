@@ -7,6 +7,8 @@ const Router = Ember.Router.extend({
 });
 
 Router.map(function() {
+  this.route('chat', {path: '/'});
+  this.route('404', {path: '/*path'})
 });
 
 export default Router;

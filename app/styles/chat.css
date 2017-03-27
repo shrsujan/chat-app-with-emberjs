@@ -145,9 +145,10 @@ ul li.members-list {
 
 #errorMsg {
     color: #fff;
-    background-color: #f00;
+    background-color: rgba(255, 0, 0 , 0.7);
+    padding: 10px 0; 
     width: 40%;
-    border-radius: 3px;
+    border-radius: 30px;
     display: none;
     margin: 0 auto;
     box-shadow: 0 1px 10px rgba(0,0,0,0.5);

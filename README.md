@@ -32,3 +32,6 @@ You will need the following things properly installed on your computer.
 
 * `ember build` (development)
 * `ember build --environment production` (production)
+
+#### Author: [Sujan Shrestha](http://twitter.com/shrsujan2007)
+#### Contributors: [Sujan Shrestha](https://github.com/shrsujan)
